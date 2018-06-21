@@ -1,0 +1,73 @@
+<html>
+ <head>
+  <script type="text/javascript">
+    var point = 0;
+    var time = 20;
+    var i = 0;
+    var click = 0;
+
+    function ts() <!-- //stボタンを無効にし、timer()を1秒ごとに実行する -->
+    {
+    document.getElementById("st").disabled = true;
+    timer1 = setInterval("timer()",1000);
+    }
+    
+    function timer()
+    {
+    if(time > 0) <!-- //各ボタンを有効にした後、乱数を代入する -->
+    {
+    time--;
+    document.getElementById("TL").innerText = "Time Left : "+time;
+    for(i=0; i<5; i++)
+    {
+    document.g_switch.elements[i].disabled = false;	  
+    document.g_switch.elements[i].value = Math.floor(Math.random()*100) + 1;
+    }
+    }
+    else <!-- //timeが0になると、timer1を停止させ、score()を実行する -->
+    {
+    clearInterval(timer1);
+    score();
+    }
+    }
+
+    function score() <!-- //alert -->
+    {
+    window.alert("Click : "+click+"\nYour Score : "+point);
+    }
+
+    function ev(n)
+    {
+    document.g_switch.elements[n].disabled = true; <!-- //押されたボタンを無効にする -->	  
+    var ary = new Array(5);
+    var k = 0;
+    for(i=0; i<5; i++)		  
+    {
+    ary[i] = document.g_switch.elements[i].value; <!-- //ary配列に各ボタンのvalueを代入する -->
+    }
+    for(i=0; i<5; i++)
+    {
+    if(ary[n] >= ary[i]){k++;} <!-- //他ボタンのvalueとの比較 -->
+    }	
+    if(k == 5)
+    {
+    point = point + parseInt(ary[n]); <!-- //pointに押されたボタンの数を足す -->
+    click++;
+    }
+    else {point = point - parseInt(ary[n]);} <!-- //pointに押されたボタンの数を引く -->
+    document.getElementById("sc").innerText = "Score : "+point;
+    }	  
+  </script>
+ </head>
+ <body>
+   <p><input type = "button" id = "st" value = "START" name = "btn" onclick = "ts()">
+     <div id="TL">Time Left : 20</div><div id="sc">Score : 0</div></p>
+      <form name="g_switch">
+	<input type="button" value="SW1" style="widht:50px; height: 50px; font-size:20px;" onclick="ev(0)">
+	<input type="button" value="SW2" style="widht:50px; height: 50px; font-size:20px;" onclick="ev(1)">
+	<input type="button" value="SW3" style="widht:50px; height: 50px; font-size:20px;" onclick="ev(2)">
+	<input type="button" value="SW4" style="widht:50px; height: 50px; font-size:20px;" onclick="ev(3)">
+	<input type="button" value="SW5" style="widht:50px; height: 50px; font-size:20px;" onclick="ev(4)">
+      </form>
+ </body>
+</html>
