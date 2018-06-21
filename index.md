@@ -38,3 +38,4 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 
 It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)
+
