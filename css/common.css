@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 /* ========BASIC======== */
 body {
@@ -52,14 +52,17 @@ h1,h2,h3,h4,h5,h6 {
    background:#fff url(../images/bg_contents.gif) 0 0 repeat-y;
 }
 
+#contents2 {
+   margin:30px 0;
+}
+
 #main {
    float:left;
    width:560px;
 }
 
 #sub {
-   float:right;
-   width:180px;
+   width:140px;
 }
 
 #totop {
@@ -177,7 +180,7 @@ h1,h2,h3,h4,h5,h6 {
 /* ========SUB CONTENTS CUSTOMIZE======== */
 #sub h2 {
    padding:3px;
-   font-size:0.88em;
+   font-size:1.00em;
    font-weight:bold;
    color:#fff;
    background:#5D5353;
@@ -189,9 +192,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #sub li {
-   margin:0;
+   margin:0 0 0 20px;
    padding-left:18px;
-   font-size:0.75em;
+   font-size:0.85em;
    line-height:1.8;
    background:#fff url(../images/bg_list.gif) 0 4px no-repeat;
    list-style:none;
