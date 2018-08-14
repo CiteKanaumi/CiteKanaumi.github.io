@@ -26,6 +26,14 @@
             $.get(csvfile, readCsv, 'text');
         });
     </script>
+    <script type="text/JavaScript">
+      function myVis(name)
+      {
+      myPIC = document.images[name].style;
+      if (myPIC.visibility == "visible") myPIC.visibility = "hidden";
+      else myPIC.visibility = "visible";
+      }
+    </script>
     <link rel='stylesheet' href='list.css'>
     <table>
       <tr>
@@ -39,11 +47,28 @@
 	</td>
       <tr>
     </table>
+    <style>
+        .display {
+            display: none;
+        }
+    </style>
+    <button onclick="btn()">Rank_info</button>
+    <div class="display" id="display">
+      <img src="./rank_info.png">
+    </div>
+    <script>
+      var img = document.getElementById('display');
+      function btn() {
+      if(img.style.display != "block")
+      {img.style.display = "block";}
+      else{img.style.display = "none";}
+      }
+    </script>
 </head>
 <body>
     <table border="1">
         <thead>
-            <tr><th>#</th><th>Nickname</th><th>Fighter's ID</th><th>rank</th><th>LP</th><th>W/L</th><th>Matches</th><th>Character</th><th>Last play</th></tr>
+            <tr><th>#</th><th>Nickname</th><th>Fighter's ID</th><th>Rank</th><th>LP</th><th>W/L</th><th>Matches</th><th>Character</th><th>Last play</th></tr>
         </thead>
 	<tbody id='csv-body' />
     </table>
