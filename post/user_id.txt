@@ -102,4 +102,3 @@ nanahistory
 NigawaComeON
 Horangnavi
 Toast_123
-qanswer
