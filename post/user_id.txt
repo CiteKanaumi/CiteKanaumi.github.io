@@ -7,6 +7,7 @@ KwonJoonHo
 KimNeuru
 NanoJordan
 son01420309
+dhschenk
 darkHwany
 ps4-throwNpull
 MnR-DongDong2
@@ -53,8 +54,6 @@ CHAJIWOON
 ChocobreaD
 IIDX_CHIKEN_PS4
 CaptainUrien
-KenNoMo
-realukyo
 lee30111
 kubambam
 KINGSUMI
@@ -83,6 +82,7 @@ Horangnavi
 hyotax
 information
 insanity_player
+Kanie_SDM
 KKAMANG
 kor_bbom
 kr_solohappy
@@ -99,6 +99,7 @@ Plato8
 PungsinKen
 q-port
 Raknos
+realukyo
 RockmanHH
 Samoyed
 SF5-GoZeT
@@ -106,6 +107,5 @@ Sinsquare
 sparkstar
 SSONGDOO_TV
 Tiberlake
-TlaTlaGo
 whim_pc
 yunkwon
