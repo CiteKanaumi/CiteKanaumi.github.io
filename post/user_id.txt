@@ -19,6 +19,7 @@ Xiller
 MagmaAxis
 DelMonteOrange
 extremin
+SQUILLA
 1st-BY
 kimjun
 Baninrok
@@ -99,7 +100,6 @@ Neckeserr
 NigawaComeON
 Panzerdivision
 Plato8
-PungsinKen
 q-port
 Raknos
 RockmanHH
