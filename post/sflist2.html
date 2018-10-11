@@ -1,16 +1,35 @@
-﻿<html>
+<html>
   <head>
+    <title>과거 리스트</title>
+    <meta charset="utf-8">
     <script src="./jquery-3.3.1.min.js"></script>
     <script src="./jquery.csv2table.js"></script>
-    <button style="width:100px;height:30px" onclick="history.back()">Back</button>
-    <h1>Not Color</h1>
+    <button style="width:100px;height:50px" onclick="history.back()">Back</button>
+    
+    <select id='list' style='height:50px;width:800px'>
+      <option value='NA'></option>
+      <option value='2018-10-11.csv'>2018-10-11</option>
+      <option value='2018-10-09.csv'>2018-10-09</option>
+    </select>
+    
+    <h1>불러올 리스트를 선택해주세요.</h1>
   </head>
   <body>
     <div id="view0"></div>
-    <script>
+    
+    <script type='text/javascript'>
+      var select = document.getElementById('list');
+      select.onchange = function()
+      {
+      
+      var selectedItem = this.options[ this.selectedIndex ];
+
+      if(selectedItem.value !='NA'){
       $(function(){
-        $('#view0').csv2table('./user_info2.csv');
+      $('#view0').csv2table('./sfv/'+selectedItem.value);
       });
+      }
+      }
     </script>
   </body>
 </html>
