@@ -1,18 +1,18 @@
 import pandas as pd
 import csv
+import os
 
-#def path(n):
-#    return './sfv/'+n+'.csv'
+path = './sfv/'
+files = []
 
-test_file0 = ['2018-10-09',
-             '2018-10-11',
-             '2018-10-12']
+for x in os.listdir(path):
+    if os.path.isfile(path + x):
+        x=x.replace('.csv','')
+        files.append(x)
 
 data_list = pd.DataFrame(columns=['Fighter\'s ID'])
 
-#test_file1 = map(path, test_file0)
-
-for (file0, i) in zip(test_file0, range(len(test_file0))):
+for (file0, i) in zip(files, range(len(files))):
     test_data = pd.read_csv('./sfv/'+file0+'.csv', dtype='object')
     test_data = test_data[['Fighter\'s ID', 'LP']]
     test_data = test_data.rename(columns={'LP': file0})
