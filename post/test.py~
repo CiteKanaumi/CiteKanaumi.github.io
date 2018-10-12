@@ -1,6 +1,0 @@
-import pandas as pd
- 
-geo_data_file = 'geonames.csv'
- 
-geo_data = pd.read_csv(geo_data_file, dtype='object')
-geo_data = geo_data[['geonameid', 'asciiname', 'latitude', 'longitude']]
