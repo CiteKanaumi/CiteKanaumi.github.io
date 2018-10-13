@@ -14,7 +14,6 @@
       <option value='2018-10-11.csv'>2018-10-11</option>
       <option value='2018-10-09.csv'>2018-10-09</option>
     </select>
-    <br>
   </head>
 
   <body>
@@ -25,20 +24,20 @@
         <input type="text" id="word" placeholder="대소문자 구분" style='height:30px'>
         <button type="button" id="btn-search" style='height:30px'>검색</button>
       </form>
-
+    <br><br>
     <div id="view0"></div>
 
-<script type="text/javascript">
-$().ready ( function() {
-$('#btn-search').click ( function() {
-$('#view0').csv2table('./sfv/merge/merge_list.csv', {
-where: [ {'Fighter\'s ID':'like' + '%' + $('#word').val() + '%'} ]
+    <script type="text/javascript">
+      $().ready ( function() {
+      $('#btn-search').click ( function() {
+      $('#view0').csv2table('./sfv/merge/merge_list.csv', {
+      where: [ {'Fighter\'s ID':'like' + '%' + $('#word').val() + '%'} ]
 
 
-});
-});
-});
-</script>
+      });
+      });
+      });
+    </script>
 
     <script type='text/javascript'>
       var select = document.getElementById('list');
