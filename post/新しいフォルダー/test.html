@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../jquery-3.3.1.min.js"></script>
+<script src="../jquery.highlight-5.js"></script>
+<script>
+$(function() {
+  var $context = $(".context");
+  var $form = $("form");
+  var $button = $form.find("button[name='searchBtn']");
+  var $input = $form.find("input[name='search']");
+  var cont = $("#context").html();
+  var matc_str = "";
+  var count = 0;
+  var i=0;
+  $button.on("click.searchBtn", function() {
+    var searchTerm = $input.val();
+    $context.removeHighlight();
+    $context.highlight(searchTerm);
+	count =0;
+	i =0;
+	var re = new RegExp(searchTerm, 'gi');
+	matc_str = cont.match(re);
+	while(matc_str[i] != null){
+		count++;
+		i++;
+	}
+	$("#show").html("Found : "+count);
+  });
+  
+});
+</script>
+<style>
+span.highlight{
+  background: #f1c40f;
+}
+h1{
+	text-align: center;
+}
+</style>
+</head>
+
+
+
+<body>
+<center>
+<hr><br>
+<form>
+<div>Search : 
+<input type="text" name="search" id="search"></div><br>
+<button type="button" name="searchBtn">search</button>
+</form><br>
+
+<div id="show"></div><br>
+</center>
+<fieldset>
+<legend>The Article : Continuous Digital Health</legend>
+	<p class="context" id="context">‚ ‚ ‚ ‚ ‚ </p>
+</fieldset>
+</body>
+<html>
