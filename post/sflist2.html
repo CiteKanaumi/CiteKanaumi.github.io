@@ -2,6 +2,8 @@
   <head>
     <title>과거 리스트</title>
     <meta charset="utf-8">
+    <link href="./pagetop.css" rel="stylesheet" >
+
     <script src="./jquery-3.3.1.min.js"></script>
     <script src="./jquery.csv2table.js"></script>
 
@@ -14,6 +16,30 @@
       <option value='2018-10-11.csv'>2018-10-11</option>
       <option value='2018-10-09.csv'>2018-10-09</option>
     </select>
+
+    <script type='text/javascript'>
+      $(function() {
+          var topBtn = $('#page-top');    
+          topBtn.hide();
+          //スクロールが100に達したらボタン表示
+          $(window).scroll(function () {
+              if ($(this).scrollTop() > 1000) {
+                  topBtn.fadeIn();
+              } else {
+                  topBtn.fadeOut();
+              }
+          });
+          //スクロールしてトップ
+          topBtn.click(function () {
+              $('body,html').animate({
+                  scrollTop: 0
+              }, 500);
+              return false;
+          });
+      });
+    </script>
+    <p id="page-top"><a href="#wrap">PAGE TOP</a></p>
+
   </head>
 
   <body>

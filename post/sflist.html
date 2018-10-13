@@ -4,6 +4,7 @@
     <title>인력소 리스트</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="table.css">
+    <link href="./pagetop.css" rel="stylesheet" >
 
     <script src="./jquery-3.3.1.min.js"></script>
     <script src="./jquery.csv.min.js"></script>
@@ -62,10 +63,10 @@
     </style>
 <table align="center">
   <td>
-    <button style="position: relative; left: -350px; background-color:#FFCC66;width:100px;height:50px" onclick="btn()">Rank_info</button>
+    <button style="position: relative; left: -350px; background-color:#FFCC66; width:100px;height:50px" onclick="btn()">Rank_info</button>
   </td>
   <td>
-    <button style="position: relative; left: 350px; width:100px;height:50px" onclick="jup()">Past_data</button>
+    <button style="position: relative; left: 350px; background-color:#99CC99; width:100px;height:50px" onclick="jup()">Past_data</button>
   </td>
 <table>
     <div class="display" id="display" align="center" style="position: relative; left: -290px;">
@@ -82,7 +83,33 @@
       location.href = "./sflist2.html"
       }
     </script>
+
+    <script type='text/javascript'>
+      $(function() {
+          var topBtn = $('#page-top');    
+          topBtn.hide();
+          //スクロールが100に達したらボタン表示
+          $(window).scroll(function () {
+              if ($(this).scrollTop() > 1000) {
+                  topBtn.fadeIn();
+              } else {
+                  topBtn.fadeOut();
+              }
+          });
+          //スクロールしてトップ
+          topBtn.click(function () {
+              $('body,html').animate({
+                  scrollTop: 0
+              }, 500);
+              return false;
+          });
+      });
+    </script>
+    <p id="page-top"><a href="#wrap">PAGE TOP</a></p>
 </head>
+
+
+
 <body>
     <table border="1" align="center">
         <thead>
