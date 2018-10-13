@@ -20,7 +20,7 @@
       $(function() {
           var topBtn = $('#page-top');    
           topBtn.hide();
-          //スクロールが100に達したらボタン表示
+
           $(window).scroll(function () {
               if ($(this).scrollTop() > 1000) {
                   topBtn.fadeIn();
@@ -54,35 +54,32 @@
     <br><br>
     <div id="view0"></div>
 
-    <script type="text/javascript">
-      $().ready ( function() {
-      $('#btn-search').click ( function() {
-      $('#view0').csv2table('./sfv/merge/merge_list.csv', {
-      where: [ {'Fighter\'s ID':'like' + '%' + $('#word').val() + '%'} ]
+      <script type="text/javascript">
+        $().ready ( function() {
+        $('#btn-search').click ( function() {
+        $('#view0').csv2table('./sfv/merge/merge_list.csv', {
+        where: [ {'Fighter\'s ID':'like' + '%' + $('#word').val() + '%'} ]
 
 
-      });
-      });
-      });
-    </script>
+        });
+        });
+        });
+      </script>
 
-    <script type='text/javascript'>
-      var select = document.getElementById('list');
-      select.onchange = function()
-      {
+      <script type='text/javascript'>
+        var select = document.getElementById('list');
+        select.onchange = function()
+        {
       
-      var selectedItem = this.options[ this.selectedIndex ];
+        var selectedItem = this.options[ this.selectedIndex ];
 
-      if(selectedItem.value !='NA'){
-      $(function(){
-      $('#view0').csv2table('./sfv/'+selectedItem.value,{
+        if(selectedItem.value !='NA'){
+        $(function(){
+        $('#view0').csv2table('./sfv/'+selectedItem.value,{});
+        });
+        }
+        }
 
-});
-      });
-      }
-      }
-
-    </script>
-</p>
+      </script>
   </body>
 </html>
