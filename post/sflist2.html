@@ -4,28 +4,42 @@
     <meta charset="utf-8">
     <script src="./jquery-3.3.1.min.js"></script>
     <script src="./jquery.csv2table.js"></script>
+
     <button style="width:100px;height:50px;background-color:#666666" onclick="history.back()"><font color='#FFFFFF'>Back</font></button>
     
     <select id='list' style='height:50px;width:800px'>
-      <option value='./merge/merge_list.csv'>LP변동</option>
       <option value='NA' selected></option>
-
       <option value='2018-10-13.csv'>2018-10-13</option>
       <option value='2018-10-12.csv'>2018-10-12</option>
       <option value='2018-10-11.csv'>2018-10-11</option>
       <option value='2018-10-09.csv'>2018-10-09</option>
     </select>
-
-    <form action=''>
-      <input type='text' id='fn' placeholder='Test' required>
-      <input id='fnsend' value='Test' type='submit'>
-    </form>
-    
-    <h1>불러올 리스트를 선택해주세요.</h1>
+    <br>
   </head>
+
   <body>
+
+    <h1>불러올 리스트를 선택해주세요.</h1>
+      <form style="position: relative; left:680px;">
+	<h>ID 검색(LP) :</h>
+        <input type="text" id="word" placeholder="대소문자 구분" style='height:30px'>
+        <button type="button" id="btn-search" style='height:30px'>검색</button>
+      </form>
+
     <div id="view0"></div>
-    
+
+<script type="text/javascript">
+$().ready ( function() {
+$('#btn-search').click ( function() {
+$('#view0').csv2table('./sfv/merge/merge_list.csv', {
+where: [ {'Fighter\'s ID':'like' + '%' + $('#word').val() + '%'} ]
+
+
+});
+});
+});
+</script>
+
     <script type='text/javascript'>
       var select = document.getElementById('list');
       select.onchange = function()
@@ -35,10 +49,14 @@
 
       if(selectedItem.value !='NA'){
       $(function(){
-      $('#view0').csv2table('./sfv/'+selectedItem.value);
+      $('#view0').csv2table('./sfv/'+selectedItem.value,{
+
+});
       });
       }
       }
+
     </script>
+</p>
   </body>
 </html>
