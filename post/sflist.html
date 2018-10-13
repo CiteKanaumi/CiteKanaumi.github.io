@@ -40,7 +40,7 @@
     </script>
 
     <link rel='stylesheet' href='list.css'>
-    <table>
+    <table align="center">
       <tr>
 	<td>
 	  <img src="../images/six.jpg">
@@ -50,6 +50,9 @@
           ※Last play(4주↑)
 	  <h3>Best : Ryu(11), Cammy(9), Guile(9)</h3>
 	</td>
+        <td>
+	  <img src="../images/six.jpg" style="transform: scale(-1, 1);">
+        </td>
       <tr>
     </table>
     <style>
@@ -57,8 +60,10 @@
             display: none;
         }
     </style>
+
     <button style="background-color:#FFCC66;width:100px;height:50px" onclick="btn()">Rank_info</button>
     <button style="width:100px;height:50px" onclick="jup()">Past_data</button>
+
     <div class="display" id="display">
       <img src="./rank_info.png">
     </div>
@@ -75,7 +80,7 @@
     </script>
 </head>
 <body>
-    <table border="1">
+    <table border="1" align="center">
         <thead>
             <tr><th rowspan="2">#</th><th rowspan="2">Nickname</th>
             <th rowspan="2">Fighter's ID</th><th rowspan="2">Rank</th>
