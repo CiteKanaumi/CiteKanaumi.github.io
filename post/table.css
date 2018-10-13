@@ -1,0 +1,24 @@
+table {
+    width: auto;
+    border: 1px solid #FFFFFF;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th {
+    color: #FFFFFF;
+    padding: 5px;
+    border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+    background: #4682B4;
+    font-weight: bold;
+    line-height: 120%;
+    text-align: center;
+}
+td {
+    padding: 5px;
+    border-bottom: 1px solid #eaeef2;
+	border-left: 1px solid #FFFFFF;
+}
+tr:nth-child(2n) {
+    background: #f7ffff;
+}
