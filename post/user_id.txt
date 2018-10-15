@@ -25,7 +25,6 @@ extremin
 SQUILLA
 kimjun
 Baninrok
-emptyroom
 Rmaskforce_PS4
 Sybox85
 Sakul_Sakul
@@ -38,7 +37,6 @@ kimboram
 KR_WrestlingMan
 Hanna_KR
 ATAEDIE
-Ohhoho
 akchul
 almaloss
 armpitplay
@@ -47,8 +45,8 @@ akavata
 LSBSBLSB
 FoxRain-Pc
 pekoshin
-oblmom
 0mnibus
+YunduUdonta
 ContaNaVi
 Justice84
 youbaek
@@ -73,7 +71,6 @@ HyoWonDaddy
 hubigo
 esw310
 AHIIII
-ALT_KEY
 Azuremoon
 Balttako_Zara
 CatMayor
@@ -97,7 +94,6 @@ kor_bbom
 kr_solohappy
 NaKwang
 Panzerdivision
-YunduUdonta
 q-port
 Raknos
 RockmanHH
@@ -108,5 +104,8 @@ thealto
 Thrall_77
 Tiberlake
 yunkwon
-3World
 FourDollar
+
+
+
+
