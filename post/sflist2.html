@@ -49,25 +49,50 @@
   <body>
 
     <h1>불러올 리스트를 선택해주세요.</h1>
+
+
       <form style="position: absolute; left:540px;" onsubmit='return false'>
 	<h>ID 검색(LP) :</h>
         <input type="text" id="word" placeholder="대소문자 구분" style='height:30px'>
         <button type="button" id="btn-search" style='height:35px'>검색</button>
       </form>
     <br><br>
-    <div id="view0"></div>
 
+
+      <form style="position: absolute; left:495px;" onsubmit='return false'>
+	<h>ID 검색(Matches) :</h>
+        <input type="text" id="word1" placeholder="대소문자 구분" style='height:30px'>
+        <button type="button" id="btn-search1" style='height:35px'>검색</button>
+      </form>
+    <br><br>
+
+    <div id="view0"></div>
       <script type="text/javascript">
         $().ready ( function() {
         $('#btn-search').click ( function() {
         $('#view0').csv2table('./sfv/merge/merge_list.csv', {
         where: [ {'Fighter\'s ID':'like' + '%' + $('#word').val() + '%'} ]
-
-
         });
         });
         });
       </script>
+
+
+
+
+    <div id="view0"></div>
+      <script type="text/javascript">
+        $().ready ( function() {
+        $('#btn-search1').click ( function() {
+        $('#view0').csv2table('./sfv/merge/merge_list2.csv', {
+        where: [ {'Fighter\'s ID':'like' + '%' + $('#word1').val() + '%'} ]
+        });
+        });
+        });
+      </script>
+
+
+
 
       <script type='text/javascript'>
         var select = document.getElementById('list');
