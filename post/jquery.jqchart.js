@@ -166,7 +166,8 @@ $.fn.jQchart= function(op){
 
 	},op||{});
 
-				if(this.op.use){
+
+	if(this.op.use){
 					this.op.use_api      = this.op.use.split(':')[0]
 					this.op.use_api_type = this.op.use.split('#')[0]
 					this.op.use_api_box  = this.op.use.split(':')[1].split('#')[1]
@@ -218,14 +219,16 @@ $.fn.jQchart= function(op){
 				this.resetBox(this.op.id);
 				this.mkCanvas(this.op);
 			},
-			//リセット
+			
+//リセット
 			resetBox : function(id){
 				$("#jQchart-title-T-"+id).remove();
 				$("#jQchart-scale-Y-"+id).remove();
 				$("#jQchart-scale-X-"+id).remove();
 				$("#jQchart-data-D-"+id).remove();
 			},
-			//キャンバスセット
+			
+//キャンバスセット
 			mkCanvas : function (op){
 
 				its=this;
@@ -233,14 +236,16 @@ $.fn.jQchart= function(op){
 				//for Opera Bug
 				if(jQuery.browser.opera && eval(jQuery.browser.version,10)<9.5)
 					$("#"+that.get(0).id).get(0).outerHTML=('<canvas id="'+this.op.id+'"></canvas>');
-				//Canvas要素
+				
+//Canvas要素
 				this.canvas =
 							$("#"+that.get(0).id)
 								.attr('width',this.op.width)
 								.attr('height' ,this.op.height)
 								.get(0)
 
-				//メインCanvasDIV作成
+				
+//メインCanvasDIV作成
 				this.jQcanvasBox =this.mkBox4Canvas(this.canvas);
 				this.canvasBox =$(this.jQcanvasBox).get(0);
 
@@ -250,7 +255,8 @@ $.fn.jQchart= function(op){
 
 					this.ctx.globalAlpha = 0.85;
 
-					//キャンバスプロパティ設定
+					
+//キャンバスプロパティ設定
 					this.ctx.fillStyle   =this.op.fillStyle;
 					this.ctx.strokeStyle =this.op.strokeStyle;
 					this.ctx.lineWidth   =this.op.lineWidth;
@@ -281,7 +287,8 @@ $.fn.jQchart= function(op){
 					//this.ctx.shadowColor = "#ccc";
 					//this.ctx.shadowOffsetX = 10;
 
-					//XY軸描画
+					
+//XY軸描画
 					this.setXaxis(this.op);
 					this.setYaxis(this.op);
 
@@ -307,10 +314,12 @@ $.fn.jQchart= function(op){
 							this.op.paddingL+ 'px',this.op.paddingT+ 'px'
 						).appendTo(this.jQcanvasBox)
 						.get(0);
-					//チャート上のデータ表示/非表示
+					
+//チャート上のデータ表示/非表示
 					if(this.op.labelDataShow){ $(this.dataBox).show() } else { $(this.dataBox).hide() }
 
-					//ダブルクリックで位置のドラッグ移動が可能になります
+					
+//ダブルクリックで位置のドラッグ移動が可能になります
 					if(jQuery)if(jQuery.ui)if(jQuery.ui.draggable && this.op.draggable){
 
 						var _cnt=0;_cnt++;if(_cnt>1)return;/*for fix unbind*/
@@ -458,7 +467,8 @@ $.fn.jQchart= function(op){
 				op.fontSize=null;
 			},
 
-			//Y軸ラベル
+			
+//Y軸ラベル
 			wrtYscale	: function(op){
 				op.subclass = 'labelY' ;
 				op.color		= '#333'	 ;
@@ -484,7 +494,8 @@ $.fn.jQchart= function(op){
 				op.fontSize=null;
 			},
 
-			//水平線軸
+			
+//水平線軸
 			setXaxis : function(op){
 
 				op.begin = this.util.getBasePoint(op);
@@ -501,7 +512,8 @@ $.fn.jQchart= function(op){
 				op.setXaxis=true;
 			},
 
-			//垂直線軸
+			
+//垂直線軸
 			setYaxis : function(op){
 				op.begin = this.util.getBasePoint(op);
 				op.end	={
@@ -526,7 +538,8 @@ $.fn.jQchart= function(op){
 					this.ctx.save();
 			},
 
-			//折れ線描画
+			
+//折れ線描画
 			wrtGraph : function(op){	//200:y=700:100
 
 				if(typeof op =='object')this.op =  op ;
