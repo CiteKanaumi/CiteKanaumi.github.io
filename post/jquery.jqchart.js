@@ -1,4 +1,4 @@
-//
+﻿//
 //jquery.jQchart
 //
 //@charset utf-8
@@ -100,46 +100,71 @@ $.fn.jQchart= function(op){
 					line_strokeStyle : op.config.line.strokeStyle ||op.config.colorSet|| $.jQchart.colorSets.char,
 					line_lineWidth   : op.config.line.lineWidth	|| 1,
 
-					//bar
+					
+//bar
 
-					//フォントサイズ
-					labelFontSize	: op.config.labelFontSize || op.fontSize ||	10,
-					labelYunitFontSize : op.config.labelYunitFontSize || op.fontSize-1 ||	9,
-					dataFontSize	: op.config.dataFontSize	|| op.fontSize ||9,
+					
+//フォントサイズ
+			
+	labelFontSize	: op.config.labelFontSize || op.fontSize ||	10,
 
-					//チャート領域のパディング
-					paddingL	: op.config.paddingL	|| 60,
-					paddingT	: op.config.paddingT	|| 50,
-					paddingR	: op.config.paddingR	|| 20,
-					paddingB	: op.config.paddingB	|| 40,
+	labelYunitFontSize : op.config.labelYunitFontSize || op.fontSize-1 ||	9,
 
-					//Title
-					title		: op.config.title		|| '<a href="http://jsgt.org/mt/archives/01/001827.html">jquery.jQchart</a>',
-					titleTop	: op.config.titleTop	|| 10,
-					titleLeft	: op.config.titleLeft	|| 70,
+	dataFontSize	: op.config.dataFontSize	|| op.fontSize ||9,
 
-					//Y単位
-					labelYunit     : op.config.labelYunit   	|| '',
 
-					//Y目盛
-					dataYmin	: op.config.scaleY.min || 0,
-					dataYmax	: op.config.scaleY.max || 1000,
-					dataYgap	: op.config.scaleY.gap || 100,
-					scaleYLeft	: op.config.scaleYLeft || 10,
+//チャート領域のパディング
 
-					//X軸ラベル配列
-					labelX		: op.config.labelX || null,
+	paddingL	: op.config.paddingL	|| 60,
 
-					//チャート領域のデータ表示
-					labelDataShow	: op.config.labelDataShow || true,
-					labelDataOffsetY: op.config.labelDataOffsetY || 10,
-					labelDataOffsetX: op.config.labelDataOffsetX || 0,
+	paddingT	: op.config.paddingT	|| 50,
 
-					data		: op.data ||{},
+	paddingR	: op.config.paddingR	|| 20,
 
-					draggable	: op.config.draggable || true
+	paddingB	: op.config.paddingB	|| 40,
 
-				},op||{});
+
+	titleTop	: op.config.titleTop	|| 10,
+
+	titleLeft	: op.config.titleLeft	|| 70,
+
+
+//Y単位
+
+	labelYunit     : op.config.labelYunit   	|| '',
+
+
+//Y目盛
+
+	dataYmin	: op.config.scaleY.min || 0,
+
+	dataYmax	: op.config.scaleY.max || 1000,
+
+	dataYgap	: op.config.scaleY.gap || 100,
+
+	scaleYLeft	: op.config.scaleYLeft || 10,
+
+
+//X軸ラベル配列
+
+	labelX		: op.config.labelX || null,
+
+
+//チャート領域のデータ表示
+
+	labelDataShow	: op.config.labelDataShow || true,
+
+	labelDataOffsetY: op.config.labelDataOffsetY || 10,
+
+	labelDataOffsetX: op.config.labelDataOffsetX || 0,
+
+
+	data		: op.data ||{},
+
+
+	draggable	: op.config.draggable || true
+
+	},op||{});
 
 				if(this.op.use){
 					this.op.use_api      = this.op.use.split(':')[0]
