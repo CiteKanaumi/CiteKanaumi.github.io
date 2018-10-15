@@ -7,7 +7,7 @@
 
 (function($) {
 
-  ////body‘‚«–Y‚ê‘Îô IE‚Íbody–³‚¢‚Æcanvas“®‚©‚È‚¢ g‚¤?
+  ////bodyæ›¸ãå¿˜ã‚Œå¯¾ç­– IEã¯bodyç„¡ã„ã¨canvaså‹•ã‹ãªã„ ä½¿ã†?
   if($.browser)if($.browser.msie)document.body||document.write('<body>');
   //http://allabout.co.jp/internet/javascript/closeup/CU20060228A/index2.htm
 
@@ -69,7 +69,7 @@ $.fn.jQchart= function(op){
 				return this.wrtGraph(op);
 			},
 
-			//‰Šúİ’è
+			//åˆæœŸè¨­å®š
 			init :	function (op){
 
 				if(!op)op={}
@@ -82,14 +82,14 @@ $.fn.jQchart= function(op){
 					type		: op.config.type	|| 'line',
 					use 		: op.config.use	|| null,   //
 
-					//ƒLƒƒƒ“ƒoƒX‚ÌID–¼
+					//ã‚­ãƒ£ãƒ³ãƒã‚¹ã®IDå
 					id	:	$(that).get(0).id||op.config.id || "canvasChart_"+(new Date()).getTime(),
 
-					//ƒLƒƒƒ“ƒoƒX‚Ì•‚Æ‚‚³
+					//ã‚­ãƒ£ãƒ³ãƒã‚¹ã®å¹…ã¨é«˜ã•
 					width		: op.config.width	|| $("#"+that.get(0).id).attr('width')	||300,
 					height		: op.config.height	|| $("#"+that.get(0).id).attr('height') ||150,
 
-					//canvas property //‚ ‚Æ‚Åline‚â²•Ê‚Éconfigİ’è‰Â”\‚É‚·‚é
+					//canvas property //ã‚ã¨ã§lineã‚„è»¸åˆ¥ã«configè¨­å®šå¯èƒ½ã«ã™ã‚‹
 					bgGradient  : op.config.bgGradient  || null,
 					fillStyle	: op.config.fillStyle	|| "rgba(255,0,0,0.5)",
 					strokeStyle	: op.config.strokeStyle	|| "rgba(180,180,180,0.5)",
@@ -102,12 +102,12 @@ $.fn.jQchart= function(op){
 
 					//bar
 
-					//ƒtƒHƒ“ƒgƒTƒCƒY
+					//ãƒ•ã‚©ãƒ³ãƒˆã‚µã‚¤ã‚º
 					labelFontSize	: op.config.labelFontSize || op.fontSize ||	10,
 					labelYunitFontSize : op.config.labelYunitFontSize || op.fontSize-1 ||	9,
 					dataFontSize	: op.config.dataFontSize	|| op.fontSize ||9,
 
-					//ƒ`ƒƒ[ƒg—Ìˆæ‚ÌƒpƒfƒBƒ“ƒO
+					//ãƒãƒ£ãƒ¼ãƒˆé ˜åŸŸã®ãƒ‘ãƒ‡ã‚£ãƒ³ã‚°
 					paddingL	: op.config.paddingL	|| 60,
 					paddingT	: op.config.paddingT	|| 50,
 					paddingR	: op.config.paddingR	|| 20,
@@ -118,19 +118,19 @@ $.fn.jQchart= function(op){
 					titleTop	: op.config.titleTop	|| 10,
 					titleLeft	: op.config.titleLeft	|| 70,
 
-					//Y’PˆÊ
+					//Yå˜ä½
 					labelYunit     : op.config.labelYunit   	|| '',
 
-					//Y–Ú·
+					//Yç›®ç››
 					dataYmin	: op.config.scaleY.min || 0,
 					dataYmax	: op.config.scaleY.max || 1000,
 					dataYgap	: op.config.scaleY.gap || 100,
 					scaleYLeft	: op.config.scaleYLeft || 10,
 
-					//X²ƒ‰ƒxƒ‹”z—ñ
+					//Xè»¸ãƒ©ãƒ™ãƒ«é…åˆ—
 					labelX		: op.config.labelX || null,
 
-					//ƒ`ƒƒ[ƒg—Ìˆæ‚Ìƒf[ƒ^•\¦
+					//ãƒãƒ£ãƒ¼ãƒˆé ˜åŸŸã®ãƒ‡ãƒ¼ã‚¿è¡¨ç¤º
 					labelDataShow	: op.config.labelDataShow || true,
 					labelDataOffsetY: op.config.labelDataOffsetY || 10,
 					labelDataOffsetX: op.config.labelDataOffsetX || 0,
@@ -152,7 +152,7 @@ $.fn.jQchart= function(op){
 				this.op.grid	= {
 						col:(this.op.labelX)?
 							this.op.labelX.length+this.op.xGapPaddingR:
-							this.op.data[0].length+this.op.xGapPaddingR||50,//b’è
+							this.op.data[0].length+this.op.xGapPaddingR||50,//æš«å®š
 						row:this.op.dataYmax/this.op.dataYgap
 				};
 				this.op.scaleXTop
@@ -193,14 +193,14 @@ $.fn.jQchart= function(op){
 				this.resetBox(this.op.id);
 				this.mkCanvas(this.op);
 			},
-			//ƒŠƒZƒbƒg
+			//ãƒªã‚»ãƒƒãƒˆ
 			resetBox : function(id){
 				$("#jQchart-title-T-"+id).remove();
 				$("#jQchart-scale-Y-"+id).remove();
 				$("#jQchart-scale-X-"+id).remove();
 				$("#jQchart-data-D-"+id).remove();
 			},
-			//ƒLƒƒƒ“ƒoƒXƒZƒbƒg
+			//ã‚­ãƒ£ãƒ³ãƒã‚¹ã‚»ãƒƒãƒˆ
 			mkCanvas : function (op){
 
 				its=this;
@@ -208,14 +208,14 @@ $.fn.jQchart= function(op){
 				//for Opera Bug
 				if(jQuery.browser.opera && eval(jQuery.browser.version,10)<9.5)
 					$("#"+that.get(0).id).get(0).outerHTML=('<canvas id="'+this.op.id+'"></canvas>');
-				//Canvas—v‘f
+				//Canvasè¦ç´ 
 				this.canvas =
 							$("#"+that.get(0).id)
 								.attr('width',this.op.width)
 								.attr('height' ,this.op.height)
 								.get(0)
 
-				//ƒƒCƒ“CanvasDIVì¬
+				//ãƒ¡ã‚¤ãƒ³CanvasDIVä½œæˆ
 				this.jQcanvasBox =this.mkBox4Canvas(this.canvas);
 				this.canvasBox =$(this.jQcanvasBox).get(0);
 
@@ -225,7 +225,7 @@ $.fn.jQchart= function(op){
 
 					this.ctx.globalAlpha = 0.85;
 
-					//ƒLƒƒƒ“ƒoƒXƒvƒƒpƒeƒBİ’è
+					//ã‚­ãƒ£ãƒ³ãƒã‚¹ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£è¨­å®š
 					this.ctx.fillStyle   =this.op.fillStyle;
 					this.ctx.strokeStyle =this.op.strokeStyle;
 					this.ctx.lineWidth   =this.op.lineWidth;
@@ -256,36 +256,36 @@ $.fn.jQchart= function(op){
 					//this.ctx.shadowColor = "#ccc";
 					//this.ctx.shadowOffsetX = 10;
 
-					//XY²•`‰æ
+					//XYè»¸æç”»
 					this.setXaxis(this.op);
 					this.setYaxis(this.op);
 
 
-					//ŠeDIVì¬
+					//å„DIVä½œæˆ
 					this.titleBox//Title
 						=this.mkBoxElement('T',
 							this.op.titleLeft,this.op.titleTop
 						).appendTo(this.jQcanvasBox)
 						.css('width',this.op.width-this.op.titleLeft)//fix for safari3 2007.12.4
 						.get(0);
-					this.scaleYBox//Y²ƒXƒP[ƒ‹
+					this.scaleYBox//Yè»¸ã‚¹ã‚±ãƒ¼ãƒ«
 						=this.mkBoxElement('Y',
 							this.op.scaleYLeft,this.op.scaleYTop
 						).appendTo(this.jQcanvasBox).get(0);
-					this.scaleXBox//X²ƒXƒP[ƒ‹
+					this.scaleXBox//Xè»¸ã‚¹ã‚±ãƒ¼ãƒ«
 						=this.mkBoxElement('X',
 							this.op.scaleXLeft,this.op.scaleXTop
 					).appendTo(this.jQcanvasBox).get(0);
 
-					this.dataBox  //ƒ`ƒƒ[ƒgã‚Ìƒf[ƒ^
+					this.dataBox  //ãƒãƒ£ãƒ¼ãƒˆä¸Šã®ãƒ‡ãƒ¼ã‚¿
 						=this.mkBoxElement('D',
 							this.op.paddingL+ 'px',this.op.paddingT+ 'px'
 						).appendTo(this.jQcanvasBox)
 						.get(0);
-					//ƒ`ƒƒ[ƒgã‚Ìƒf[ƒ^•\¦/”ñ•\¦
+					//ãƒãƒ£ãƒ¼ãƒˆä¸Šã®ãƒ‡ãƒ¼ã‚¿è¡¨ç¤º/éè¡¨ç¤º
 					if(this.op.labelDataShow){ $(this.dataBox).show() } else { $(this.dataBox).hide() }
 
-					//ƒ_ƒuƒ‹ƒNƒŠƒbƒN‚ÅˆÊ’u‚Ìƒhƒ‰ƒbƒOˆÚ“®‚ª‰Â”\‚É‚È‚è‚Ü‚·
+					//ãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒã‚¯ã§ä½ç½®ã®ãƒ‰ãƒ©ãƒƒã‚°ç§»å‹•ãŒå¯èƒ½ã«ãªã‚Šã¾ã™
 					if(jQuery)if(jQuery.ui)if(jQuery.ui.draggable && this.op.draggable){
 
 						var _cnt=0;_cnt++;if(_cnt>1)return;/*for fix unbind*/
@@ -320,7 +320,7 @@ $.fn.jQchart= function(op){
 										$(_cbox).replaceWith('<canvas id="'+its.canvas.id+'"></canvas>')
 									}))
 								*/
-								.append('<div id="jQchart-drgmsg-M-'+oj.id+'" class="jQchart-drgmsg-M">draggable-ƒhƒ‰ƒbƒO‚Å‚«‚Ü‚·</div>')
+								.append('<div id="jQchart-drgmsg-M-'+oj.id+'" class="jQchart-drgmsg-M">draggable-ãƒ‰ãƒ©ãƒƒã‚°ã§ãã¾ã™</div>')
 
 					}
 					function draggingoff(oj){
@@ -388,7 +388,7 @@ $.fn.jQchart= function(op){
 					);
 			},
 
-			//X²ƒ‰ƒxƒ‹
+			//Xè»¸ãƒ©ãƒ™ãƒ«
 			wrtXscale	: function(op){
 				op.subclass = 'labelX' ;
 				op.color		= '#333'	 ;
@@ -414,7 +414,7 @@ $.fn.jQchart= function(op){
 				op.fontSize=null;
 			},
 
-			//Y²ƒ‰ƒxƒ‹’PˆÊ
+			//Yè»¸ãƒ©ãƒ™ãƒ«å˜ä½
 			wrtLabelYunit	: function(op,x,y){
 				op.subclass = 'labelYunit' ;
 				op.color		= '#333'	 ;
@@ -433,7 +433,7 @@ $.fn.jQchart= function(op){
 				op.fontSize=null;
 			},
 
-			//Y²ƒ‰ƒxƒ‹
+			//Yè»¸ãƒ©ãƒ™ãƒ«
 			wrtYscale	: function(op){
 				op.subclass = 'labelY' ;
 				op.color		= '#333'	 ;
@@ -445,7 +445,7 @@ $.fn.jQchart= function(op){
 
 				for (var i = 0, currP=0; i <= op.grid.row;i++) {
 
-					currP = Math.round((currP*100))/100;//ŠÛ‚ß
+					currP = Math.round((currP*100))/100;//ä¸¸ã‚
 
 					this.wrtText(x+ 'px',y+ 'px',
 						currP+" ",
@@ -459,7 +459,7 @@ $.fn.jQchart= function(op){
 				op.fontSize=null;
 			},
 
-			//…•½ü²
+			//æ°´å¹³ç·šè»¸
 			setXaxis : function(op){
 
 				op.begin = this.util.getBasePoint(op);
@@ -476,7 +476,7 @@ $.fn.jQchart= function(op){
 				op.setXaxis=true;
 			},
 
-			//‚’¼ü²
+			//å‚ç›´ç·šè»¸
 			setYaxis : function(op){
 				op.begin = this.util.getBasePoint(op);
 				op.end	={
@@ -492,7 +492,7 @@ $.fn.jQchart= function(op){
 
 			},
 
-			//²•`‰æ
+			//è»¸æç”»
 			drawAxis : function(op){
 					this.ctx.beginPath();
 					this.ctx.moveTo(op.begin.x,op.begin.y);
@@ -501,7 +501,7 @@ $.fn.jQchart= function(op){
 					this.ctx.save();
 			},
 
-			//Ü‚êü•`‰æ
+			//æŠ˜ã‚Œç·šæç”»
 			wrtGraph : function(op){	//200:y=700:100
 
 				if(typeof op =='object')this.op =  op ;
@@ -515,7 +515,7 @@ $.fn.jQchart= function(op){
 					default      : it=this.drawLine(op,it) ;break;
 				}
 
-				//ƒ^ƒCƒgƒ‹‚Ö
+				//ã‚¿ã‚¤ãƒˆãƒ«ã¸
 				it.wrtTitle(it.op);
 
 				return $("#"+it.op.id);
@@ -530,8 +530,8 @@ $.fn.jQchart= function(op){
 					op.subclass = 'labelData';
 					op.color		= 'orange'	;
 
-					var strokeStyle=op.line_strokeStyle[index]||'#777';//‚Æ‚è‚ ‚¦‚¸7color
-					its.ctx.strokeStyle=strokeStyle;//Ü‚êüF ‚ ‚Æ‚Åoptionw’è‚É
+					var strokeStyle=op.line_strokeStyle[index]||'#777';//ã¨ã‚Šã‚ãˆãš7color
+					its.ctx.strokeStyle=strokeStyle;//æŠ˜ã‚Œç·šè‰² ã‚ã¨ã§optionæŒ‡å®šã«
 					its.ctx.lineWidth=op.line_lineWidth[index]||1;
 					 var x = op.paddingL,
 					     y = - op.rows[0]*op.height/op.dataYmax ;
@@ -547,7 +547,7 @@ $.fn.jQchart= function(op){
 						if(i==0) its.ctx.moveTo(x,y);
 						else	 its.ctx.lineTo(x,y);
 
-						//ƒf[ƒ^
+						//ãƒ‡ãƒ¼ã‚¿
 						if( x <= op.width){
 							var dx=x-op.paddingL,dy=y-op.paddingT;
 							it.wrtText(
@@ -566,9 +566,9 @@ $.fn.jQchart= function(op){
 				});
 
 
-				//Xƒ‰ƒxƒ‹‚Ö
+				//Xãƒ©ãƒ™ãƒ«ã¸
 				if(it.op.labelX)it.wrtXscale(it.op);
-				//Yƒ‰ƒxƒ‹‚Ö
+				//Yãƒ©ãƒ™ãƒ«ã¸
 				it.wrtYscale(it.op);
 
 				return it;
@@ -582,8 +582,8 @@ $.fn.jQchart= function(op){
 
 				for(var i=0;i<dlen;i++){
 
-					var strokeStyle=op.line_strokeStyle[i]||'#777';//‚Æ‚è‚ ‚¦‚¸7color
-					its.ctx.fillStyle=strokeStyle;//Ü‚êüF ‚ ‚Æ‚Åoptionw’è‚É
+					var strokeStyle=op.line_strokeStyle[i]||'#777';//ã¨ã‚Šã‚ãˆãš7color
+					its.ctx.fillStyle=strokeStyle;//æŠ˜ã‚Œç·šè‰² ã‚ã¨ã§optionæŒ‡å®šã«
 					if(ofs!=0)its.ctx.fillStyle = "#eee";
 
 					//its.ctx.strokeStyle = "orange";
@@ -607,7 +607,7 @@ $.fn.jQchart= function(op){
 					its.ctx.fillRect(x+ofs,y+ofs,it.op.barWidth,op.paddingT+op.chartHeight-y);
 					its.ctx.strokeRect(x+ofs,y+ofs,it.op.barWidth,op.paddingT+op.chartHeight-y);
 
-						//ƒf[ƒ^
+						//ãƒ‡ãƒ¼ã‚¿
 						if( x <= op.width){
 							var dx=x-op.paddingL,dy=y-op.paddingT;
 							it.wrtText(
@@ -621,14 +621,14 @@ $.fn.jQchart= function(op){
 					x=x+op.xGap;
 
 				}
-				//Xƒ‰ƒxƒ‹‚Ö
+				//Xãƒ©ãƒ™ãƒ«ã¸
 				if(it.op.labelX)it.wrtXscale(it.op);
-				//Yƒ‰ƒxƒ‹‚Ö
+				//Yãƒ©ãƒ™ãƒ«ã¸
 				it.wrtYscale(it.op);
 				return it;
 			},
 
-			//•¶šo—Í
+			//æ–‡å­—å‡ºåŠ›
 			wrtText : function(x,y,text,op,scope){
 
 				var op=op||this.op,
@@ -653,7 +653,7 @@ $.fn.jQchart= function(op){
 					function unhover(){$(this).css("font-size",1+"em")}
 			},
 
-			//ƒfƒoƒbƒO—p
+			//ãƒ‡ãƒãƒƒã‚°ç”¨
 			_debugShowPos4 : function(){
 				var htm='Properties of<br>'
 							 +'<font color="orange">$("#'+this.op.id+'").jQchart.op</font><hr>'
@@ -700,7 +700,7 @@ $.fn.jQchart= function(op){
 
 		});
 
-		$(that).jQchart.draw(_option);//•`‰æ
+		$(that).jQchart.draw(_option);//æç”»
 		return $(this);
 	}
 
