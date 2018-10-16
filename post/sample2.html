@@ -20,30 +20,42 @@
       <form style="position: absolute; left:540px;" onsubmit='return false'>
 	<h>ID 검색 :</h>
         <input type="text" id="word" placeholder="대소문자 구분" style='height:40px'>
+
+
         &nbsp;
         <button type="button" id="btn-search" style='height:45px; width:45px'>LP</button>
 
       </form>
     <br><br>
 
+<form id="word1">max
+	<input type="radio" name="radio" value="10000" style='height:40px'>10000
+	<input type="radio" name="radio" value="50000" style='height:40px'>50000
+	<input type="radio" name="radio" value="100000" style='height:40px'>100000
+</form>
 
 
       <script type="text/javascript">
         $().ready ( function() {
-
+	
 
         $('#btn-search').click ( function() {
-        $('#view40').csv2table('./sfv/merge/merge_list2.csv', {
+	var element = document.getElementById('word1');
+	var radioNode = element.radio;
+	var max = radioNode.value;
+	if(max === ""){}
+	else{
+
+        $('#view40').csv2table('./sfv/merge/merge_list.csv', {
 
         where: [ {'Fighter\'s ID':'like' + '%' + $('#word').val() + '%'} ],
 
 	use      : 'jqchart:line#canvasMyID',
-        scaleY   : {max:50000,gap:1000}
-	
-
-
+        scaleY   : {max:max,gap:(max/10)}
 
         });
+
+}
         });
 
 
