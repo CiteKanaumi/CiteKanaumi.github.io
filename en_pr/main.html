@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main</title>
+    <meta charset="utf-8">
+    <link href="../css/pagetop.css" rel="stylesheet" >
+
+  
+
+    <script type="text/JavaScript">
+      function myVis(name)
+      {
+      myPIC = document.images[name].style;
+      if (myPIC.visibility == "visible") myPIC.visibility = "hidden";
+      else myPIC.visibility = "visible";
+      }
+    </script>
+
+    <link rel='stylesheet' href='list.css'>
+
+
+
+
+ 
+
+
+
+
+
+    <script type='text/javascript'>
+      $(function() {
+          var topBtn = $('#page-top');    
+          topBtn.hide();
+          //スクロールが100に達したらボタン表示
+          $(window).scroll(function () {
+              if ($(this).scrollTop() > 1000) {
+                  topBtn.fadeIn();
+              } else {
+                  topBtn.fadeOut();
+              }
+          });
+          //スクロールしてトップ
+          topBtn.click(function () {
+              $('body,html').animate({
+                  scrollTop: 0
+              }, 500);
+              return false;
+          });
+      });
+    </script>
+    <p id="page-top"><a href="#wrap">PAGE TOP</a></p>
+</head>
+
+
+
+<body>
+    
+</body>
+</html>
