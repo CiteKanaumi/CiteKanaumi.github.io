@@ -3,11 +3,11 @@
   <head>
     <title>인력소 리스트</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="table.css">
-    <link href="./pagetop.css" rel="stylesheet" >
+    <link rel="stylesheet" type="text/css" href="../css/table.css">
+    <link href="../css/pagetop.css" rel="stylesheet" >
 
-    <script src="./jquery-3.3.1.min.js"></script>
-    <script src="./jquery.csv.min.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery.csv.min.js"></script>
 
     <script>
         function readCsv(data) {
@@ -25,7 +25,7 @@
             });
             $(target).append(insert);
         }
-        var csvfile = './user_info.csv';
+        var csvfile = './data/user_info.csv';
         $(function(){
             $.get(csvfile, readCsv, 'text');
         });

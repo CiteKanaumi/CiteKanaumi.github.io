@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width">
     <link href="../css/pagetop.css" rel="stylesheet" >
 
+    <script src="../js/jquery-3.3.1.min.js"></script>
+
 
     <script type='text/javascript'> //スクロール機能
       $(function() {
           var topBtn = $('#page-top');    
           topBtn.hide();
-          //スクロールが100に達したらボタン表示
+          //スクロールが1000に達したらボタン表示
           $(window).scroll(function () {
               if ($(this).scrollTop() > 1000) {
                   topBtn.fadeIn();
@@ -28,7 +30,7 @@
           });
       });
     </script>
-    <p id="page-top"><a href="">PAGE TOP</a></p>
+    <p id="page-top"><a href="#wrap">PAGE TOP</a></p>
 </head>
 
 
