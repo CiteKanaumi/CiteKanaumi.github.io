@@ -1,21 +1,22 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html>
-  <head>
-    <title>Materials & Methodology</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link href="../css/pagetop.css" rel="stylesheet" >
+<head>
+   <meta charset="utf-8"/>
+   <meta name="viewport" content="width=device-width">
+
+   <title>上部ナビゲーション型</title>
+
+    <link rel="stylesheet" href="../css/topNavigation.css">
+    <link rel="stylesheet" href="../css/pagetop.css">
 
     <script src="../js/jquery-3.3.1.min.js"></script>
-
-
     <script type='text/javascript'> //スクロール機能
       $(function() {
           var topBtn = $('#page-top');    
           topBtn.hide();
           //スクロールが500に達したらボタン表示
           $(window).scroll(function () {
-              if ($(this).scrollTop() > 500) {
+              if ($(this).scrollTop() > 10) {
                   topBtn.fadeIn();
               } else {
                   topBtn.fadeOut();
@@ -31,33 +32,36 @@
       });
     </script>
     <p id="page-top"><a href="#wrap">PAGE TOP</a></p>
-</head>
 
+    <script type='text/javascript'> //テキストファイル読み込み
+      $(function() {
+      $("#read_text").load("./text/sample.txt");
+      });
+    </script>
+</head>
 
 
 <body>
 
-
-<p><a href=""><img src="./image/3.png" height="150"></a></p> <!-- #3 -->
-
-
-
-<p><img src="./image/map.png" alt="サンプル" border="0" width="221" height="145" usemap="#sample"></p>  <!-- リンクマップ -->
-<map name="sample">
-<area shape="rect" coords="22,11,122,62" href="map1.html" alt="リンク1">
-<area shape="circle" coords="184,86,30" href="map2.html" alt="リンク2">　<!-- （X,Y,半径） -->
-<area shape="poly" coords="87,78,30,110,81,139,69,113" href="map3.html" alt="リンク3">　
-<area shape="default" href="map4.html" alt="リンク4">
-</map>
+    <header class="topNavigation">
+       <p>
+	<img src="./image/none.png" height="50">
+	<a href="./p1.html"><img src="./image/ya2.png" height="50" style="transform: scale(-1, 1);"></a>
+	<a href="./main.html"><img src="./image/home.png" height="50"></a>
+	<a href="./p2.html"><img src="./image/ya2.png" height="50"></a>
+       </p>
+    </header>
 
 
-<p>内容<br>内容内容内容内容内容<br>内容内容内容</p>
-<p>内容<br>内容内容内容内容内容<br>内容内容内容</p>
-<p>内容<br>内容内容内容内容内容<br>内容内容内容</p>
-<p>内容<br>内容内容内容内容内容<br>内容内容内容</p>
-<p>内容<br>内容内容内容内容内容<br>内容内容内容</p>
-<p>内容<br>内容内容内容内容内容<br>内容内容内容</p>
-<p>内容<br>内容内容内容内容内容<br>内容内容内容</p>
-    
+
+
+
+
+    <div class="content">
+      <p><img src="./image/2.png" height="150" align="left"></p><br>
+      <p></p>
+    </div>
+    <div class="text"><p id="read_text"></p></div>
+
 </body>
 </html>
