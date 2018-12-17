@@ -4,10 +4,11 @@
     <title>Main</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link href="../css/pagetop.css" rel="stylesheet" >
+
+    <link rel="stylesheet" href="../css/topNavigation.css">
+    <link rel="stylesheet" href="../css/pagetop.css">
 
     <script src="../js/jquery-3.3.1.min.js"></script>
-
 
     <script type='text/javascript'> //スクロール機能
       $(function() {
@@ -34,32 +35,21 @@
 </head>
 
 
-
 <body>
+    <header class="topNavigation_main">
+       <p>
+       </p>
+    </header>
 
-<p><img src="./image/qr-code.png" width="300"></p> <!-- qrコード -->
-<p><a href="./p1.html"><img src="./image/1.png" height="150"></a></p> <!-- #1 -->
-<p><a href="./p2.html"><img src="./image/2.png" height="150"></a></p> <!-- #2 -->
-<p><a href="./p3.html"><img src="./image/3.png" height="150"></a></p> <!-- #3 -->
-<p><a href="./p4.html"><img src="./image/4.png" height="150"></a></p> <!-- #4 -->
+      <p><img src="./image/main.png" alt="main" border="0" usemap="#sample" align="center"></p>  <!-- リンクマップ -->
+      <map name="sample">
+      <area shape="circle" coords="231,268,160" href="./p1.html" alt="青">　<!-- （X,Y,半径） -->
+      <area shape="circle" coords="536,164,160" href="./p2.html" alt="赤">　<!-- （X,Y,半径） -->
+      <area shape="circle" coords="775,373,160" href="./p3.html" alt="橙">　<!-- （X,Y,半径） -->
+      <area shape="circle" coords="167,583,160" href="./p4.html" alt="黒">　<!-- （X,Y,半径） -->
+      <area shape="circle" coords="715,695,160" href="./p5.html" alt="緑">　<!-- （X,Y,半径） -->
+      <area shape="circle" coords="408,793,160" href="./p6.html" alt="黄">　<!-- （X,Y,半径） -->
+      </map> <!-- 円 半径160 -->
 
-
-<p><img src="./image/main.png" alt="サンプル" border="0" usemap="#sample"></p>  <!-- リンクマップ -->
-<map name="sample">
-<area shape="rect" coords="22,11,122,62" href="map1.html" alt="リンク1">
-<area shape="circle" coords="184,86,30" href="map2.html" alt="リンク2">　<!-- （X,Y,半径） -->
-<area shape="poly" coords="87,78,30,110,81,139,69,113" href="map3.html" alt="リンク3">　
-<area shape="default" href="map4.html" alt="リンク4">
-</map> <!-- 円 直径112.5 -->
-
-
-<p>内容<br>内容内容内容内容内容<br>内容内容内容</p>
-<p>内容<br>内容内容内容内容内容<br>内容内容内容</p>
-<p>内容<br>内容内容内容内容内容<br>内容内容内容</p>
-<p>内容<br>内容内容内容内容内容<br>内容内容内容</p>
-<p>内容<br>内容内容内容内容内容<br>内容内容内容</p>
-<p>内容<br>内容内容内容内容内容<br>内容内容内容</p>
-<p>内容<br>内容内容内容内容内容<br>内容内容内容</p>
-    
 </body>
 </html>

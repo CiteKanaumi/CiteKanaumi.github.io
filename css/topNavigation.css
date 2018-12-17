@@ -9,9 +9,19 @@ body{
     background-color: #888;
     color: #fff;
 }
+.topNavigation_main{
+    height: 130px;
+    text-align: center;
+    background-color: #888;
+    color: #fff;
+}
 .content{
     margin-top: 10px;
     font-size: 25px;
+}
+.content_main{
+    margin-left: 100px;
+    margin-top: 10px;
 }
 .text{
     margin-left: 10px;
