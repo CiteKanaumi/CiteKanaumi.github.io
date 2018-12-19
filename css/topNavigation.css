@@ -5,6 +5,7 @@ body{
 }
 .topNavigation{
     height: 70px;
+    width: 960px;
     text-align: center;
     background-color: #888;
     color: #fff;
