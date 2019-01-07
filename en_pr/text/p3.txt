@@ -1,0 +1,16 @@
+We have explored four depths for
+our networks: 9, 17, 29 and 49, which we define
+as being the number of convolutional layers.
+The depth of a network is obtained by summing
+the number of blocks with 64, 128, 256 and
+512 filters, with each block containing two convolutional
+layers. In Figure 1, the network has
+2 blocks of each type, resulting in a depth of
+2 * (2 + 2 + 2 + 2) = 16. Adding the very first
+convolutional layer, this sums to a depth of 17 convolutional
+layers. The depth can thus be increased
+or decreased by adding or removing convolutional
+blocks with a certain number of filters. The best
+configurations we observed for depths 9, 17, 29
+and 49 are described in Table 2. We also give the
+number of parameters of all convolutional layers.
