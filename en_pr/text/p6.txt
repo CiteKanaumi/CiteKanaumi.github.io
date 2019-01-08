@@ -1,34 +1,4 @@
-We have presented a new architecture for NLP
-which follows two design principles: 1) operate at
-the lowest atomic representation of text, i.e. characters,
-and 2) use a deep stack of local operations,
-i.e. convolutions and max-pooling of size 3, to
-learn a high-level hierarchical representation of a
-sentence. This architecture has been evaluated on
-eight freely available large-scale data sets and we
-were able to show that increasing the depth up to
-29 convolutional layers steadily improves performance.
-Our models are much deeper than previously
-published convolutional neural networks
-and they outperform those approaches on all data
-sets. To the best of our knowledge, this is the first
-time that the "benefit of depths" was shown for
-convolutional neural networks in NLP.
-Eventhough text follows human-defined rules
-and images can be seen as raw signals of our environment,
-images and small texts have similar
-properties. Texts are also compositional for many
-languages. Characters combine to form n-grams,
-stems, words, phrase, sentences etc. These similar
-properties make the comparison between computer
-vision and natural language processing very
-profitable and we believe future research should
-invest into making text processing models deeper.
-Our work is a first attempt towards this goal.
-In this paper, we focus on the use of very deep
-convolutional neural networks for sentence classification
-tasks. Applying similar ideas to other sequence
-processing tasks, in particular neural machine
-translation is left for future research. It
-needs to be investigated whether these also benefit
-from having deeper convolutional encoders.
+In 29 levels of CNN, the precision that is better than a conventional model is provided.
+It is the first trial that an advantage of the depth was shown in natural language processing.
+We put a focus only for the sentence classification work by this experiment.
+It is necessary to investigate other fields of the natural language processing.
