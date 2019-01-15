@@ -1,14 +1,1 @@
-This paper is structured as follows. There have
-been previous attempts to use ConvNets for text
-processing. We summarize the previous works in
-the next section and discuss the relations and differences.
-Our architecture is described in detail
-in section 3. We have evaluated our approach on
-several sentence classification tasks, initially proposed
-by (Zhang et al., 2015). These tasks and
-our experimental results are detailed in section 4.
-The proposed deep convolutional network shows
-significantly better results than previous ConvNets
-approach. The paper concludes with a discussion
-of future research directions for very deep approach
-in NLP.
+The proposed deep convolutional network shows significantly better results than previous ConvNets approach. The paper concludes with a discussion of future research directions for very deep approach in NLP.
