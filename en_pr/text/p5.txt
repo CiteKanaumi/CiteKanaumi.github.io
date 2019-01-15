@@ -1,4 +1,4 @@
-Except for AG and Sogou and Yah.A, it was able to attain the precision that was higher than a conventional study.
-It was confirmed that the deeper the data set of all the data sets, the higher the accuracy is increased.
-We understood that Max pooling was the best.
-There is little number of the classes this time, but the problem of study in the future what kind of result is provided when it became the number of the big classes.
+Except for AG and Sogou and Yah.A, it was able to attain the precision that was higher than a conventional study.<br>
+It was confirmed that the deeper the data set of all the data sets, the higher the accuracy is increased.<br>
+We understood that Max pooling was the best.<br>
+There is little number of the classes this time, but the problem of study in the future what kind of result is provided when it became the number of the big classes.<br>
