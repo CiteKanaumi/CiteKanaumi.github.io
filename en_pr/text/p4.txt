@@ -1,8 +1,7 @@
-We tested it using the data of the list.
-Because there is little number of classes, I may not perform it exactly.
+There are datasets.
+ 
+ 
+This is data having highest precision in a conventional study.
 
-Common model settings
-The input text assumes it less than 1,014, and the thing which is bigger than it cuts it off.
-Batch size is 128.
-Training is performed with SGD.
-An initial learning rate of 0.01 and momentum of 0.9.
+ 
+This is results.
