@@ -1,5 +1,7 @@
+<p>Methodology<br>
 We have explored four depths for our networks: 9, 17, 29 and 49, which we define as being the number of convolutional layers. The depth of a network is obtained by summing the number of blocks with 64, 128, 256 and 512 filters, with each block containing two convolutional layers. <br>
-1.<br>
-2.<br>
-3.<br>
-Materials<br>
+
+<p>Materials<br>
+-Data set<br>
+-<br>
+-<br>
