@@ -34,10 +34,20 @@
     <p id="page-top"><a href="#wrap">PAGE TOP</a></p>
 
     <script type='text/javascript'> //テキストファイル読み込み
-      $(function() {
-      $("#read_text").load("./text/p4.txt");
+     
+	    $(function() {
+      $("#read_text1").load("./text/p4-1.txt");
+      });
+
+	    $(function() {
+      $("#read_text2").load("./text/p4-2.txt");
+      });
+	    $(function() {
+      $("#read_text3").load("./text/p4-3.txt");
       });
     </script>
+	
+	
 </head>
 
 
@@ -61,11 +71,10 @@
          <br><img src="./image/title/da.png" align="left"></p><br>
       <p></p>
     </div>
-    <div class="text"><p id="read_text"></p>
-	<p><img src="./image/tab1.png" width="700"><br>
-	<img src="./image/tab2.png" width="700"><br>
-	<img src="./image/tab3.png" width="700"></p>
-    </div>
+	
+	<div class="text"><p id="read_text1"></p><p><img src="./image/tab1.png" width="700"></p></div>
+	<div class="text"><p id="read_text2"></p><p><img src="./image/tab2.png" width="700"></p></div>
+	<div class="text"><p id="read_text3"></p><p><img src="./image/tab3.png" width="700"></p></div>
 
 </body>
 </html>
