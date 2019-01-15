@@ -1,7 +1,1 @@
-There are datasets.<br>
- 
- 
 This is data having highest precision in a conventional study.<br>
-
- 
-This is results.<br>
