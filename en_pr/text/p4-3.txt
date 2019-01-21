@@ -1,1 +1,5 @@
+Å¶n-TFIDF means ÅgTerm FrequencyÅh<br>
+Å¶ngrams means that text segmentation method of dividing arbitrary character strings and documents with consecutive n characters.<br>
+Å¶RNN means recurrent neural network.<br>
+<br>
 This is results.<br>

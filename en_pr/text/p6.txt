@@ -1,4 +1,4 @@
-In 29 levels of Convolutional Neural Network(CNN), the precision that is better than a conventional model is provided.<br>
+In 29 levels of CNN, the precision that is better than a conventional model is provided.<br>
 It is the first trial that an advantage of the depth was shown in natural language processing.<br>
-We put a focus only for the sentence classification work by this experiment.<br>
+The researchers put a focus only for the sentence classification work by this experiment.<br>
 It is necessary to investigate other fields of the natural language processing.<br>
