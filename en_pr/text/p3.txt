@@ -1,7 +1,7 @@
 <font size="+1">Methodology</font><br>
-We have explored four depths for our networks: 9, 17, 29 and 49, which we define as being the number of convolutional layers. The depth of a network is obtained by summing the number of blocks with 64, 128, 256 and 512 filters, with each block containing two convolutional layers. <br>
+The researchers have explored four depths for our networks: 9, 17, 29 and 49, which the researchers define as being the number of convolutional layers. The depth of a network is obtained by summing the number of blocks with 64, 128, 256 and 512 filters, with each block containing two convolutional layers. <br>
 <br>
 <font size="+1">Materials</font><br>
 -Data set<br>
 -Stochastic Gradient Descent(SGD)<br>
--<br>
+-NVIDIA K40 GPU<br>
