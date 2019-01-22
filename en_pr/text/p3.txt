@@ -1,7 +1,6 @@
 <b>Materials</b><br>
 -NVIDIA K40 GPU<br>
--Data set<br>
--Stochastic Gradient Descent(SGD)<br>
+-Data sets<br>
 <br>
 <b>Methodology</b><br>
 The researchers use 4 depths for networks(9, 17, 29, 49) of VDCNN model(figure 1) to analyze data sets.<br>
