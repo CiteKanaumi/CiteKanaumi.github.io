@@ -4,5 +4,4 @@
 -Stochastic Gradient Descent(SGD)<br>
 <br>
 <b>Methodology</b><br>
-The researchers have explored four depths for our networks: 9, 17, 29 and 49, which the researchers define as being the number of convolutional layers. The depth of a network is obtained by summing the number of blocks with 64, 128, 256 and 512 filters, with each block containing two convolutional layers. <br>
-
+The researchers use 4 depths for networks(9, 17, 29, 49) of VDCNN model(figure 1) to analyze data sets.<br>
