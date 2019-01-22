@@ -1,3 +1,3 @@
 The researchers propose to use deep architectures of many convolutional layers to ap- proach this goal, using up to 29 layers.<br>
-The proposed deep convolutional network shows significantly better results than previous CNN(Convolutional Neural Network) approach.<br>
+The proposed VDCNN(very deep convolutional neural networks) significantly better results than previous CNN(Convolutional Neural Network) approach.<br>
 The paper concludes with a discussion of future research directions for very deep approach in NLP(Natural Language Processing).<br>
