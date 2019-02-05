@@ -2,4 +2,4 @@ In 29 levels of CNN, the precision that is better than a conventional model is p
 It is the first trial that an advantage of the depth was shown in natural language processing.<br>
 The researchers put a focus only for the sentence classification work by this experiment.<br>
 <br>
-In future, Other fields need to be investigated for better natural language processing.<br>
+In future, other fields need to be investigated for better natural language processing.<br>
