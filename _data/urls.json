@@ -19,10 +19,5 @@
     "text": "Resume",
     "url": "/#",
     "icon": "fa-graduation-cap",
-  },
-  {
-    "text": "Github",
-    "url": "https://github.com/CiteKanaumi",
-    "icon": "fa-github"
   }
 ]
