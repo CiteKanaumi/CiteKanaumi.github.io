@@ -1,8 +1,8 @@
 title: Cite's Blog
 description: Blog
 author: Cite Kanaumi
-logo: /imges/cite.jpg
-github: https://github.com/codeasashu
+logo: "/imges/cite.jpg"
+github: "https://github.com/CiteKanaumi"
 about: Freelance developer
 
 baseurl: ""
