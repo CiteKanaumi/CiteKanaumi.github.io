@@ -5,12 +5,12 @@ logo: images/cite.jpg
 github: https://github.com/CiteKanaumi
 about: 
 
-baseurl: ""
-url: ""
+baseurl: "/"
+url: "https://citekanaumi.github.io"
 
 allowsearch: true
 
-disqus_shortname: aboutashu
+disqus_shortname: 'comment'
 google_analytics: UA-72862926-1
 
 share:
@@ -27,4 +27,3 @@ paginate_path: "/page:num/"
 markdown: kramdown
 gems: [jekyll-paginate, jekyll-gist]
 
-disqus_shortname: 'comment'
