@@ -18,6 +18,12 @@
   {
     "text": "Resume",
     "url": "/#",
-    "icon": "fa-graduation-cap",
+    "icon": "fa-graduation-cap"
+  },
+  {
+    "text": "Page",
+    "url": "/page/",
+    "icon": "fa-desktop",
+    "layout": "post"
   }
 ]
