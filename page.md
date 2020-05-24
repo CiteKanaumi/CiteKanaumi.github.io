@@ -1,7 +1,7 @@
 ---
-layout: page
-title: Page
-permalink: /page/
+layout: vrchat
+title: VRChat
+permalink: /VRC/
 ---
 
 
