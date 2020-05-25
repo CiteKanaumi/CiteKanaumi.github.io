@@ -6,9 +6,9 @@ files = glob.glob("./img/vrc/*.jpg")
 
 h_f = """
 
----
+---\n
 layout: default
----
+---\n
 <div class="well">
     {% if page.subtitle %}
     <h4 class="home-subtitle">{{ page.subtitle }}</h4>
