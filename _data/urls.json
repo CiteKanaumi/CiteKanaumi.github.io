@@ -13,7 +13,13 @@
   {
     "text": "VRChat",
     "url": "/VRC/",
-    "icon": "fa-desktop",
+    "icon": "fa-file-image-o",
+    "layout": "post"
+  },
+  {
+    "text": "Photo",
+    "url": "/photo/",
+    "icon": "fa-camera-retro",
     "layout": "post"
   },
   {
