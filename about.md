@@ -6,4 +6,4 @@ permalink: /about/
 
 Here is Cite's Daily Blog (2020.05.23~)
 
-<img src="https://citekanaumi.github.io/static/img/avatar.png" width=50%>
+<img src="https://citekanaumi.github.io/static/img/avatar.png" width=33%>
