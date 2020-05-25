@@ -1,4 +1,10 @@
----
+import glob
+import re
+
+files = glob.glob("./img/photo/*.jpg")
+
+
+h_f = """---
 layout: default
 ---
 <div class="well">
@@ -22,10 +28,9 @@ layout: default
 
 
 
-<img src="../img/photo/D6kW1XzU.jpg">
-<img src="../img/photo/P1000171.JPG">
-<img src="../img/photo/P1000257.jpg">
+"""
 
+h_b = """
 
         </div>
       </div>
@@ -55,3 +60,24 @@ layout: default
     </div>
 </div>
 
+"""
+
+
+
+
+newfiles2 = ['<img src=".'+file+'">' for file in files]
+
+newfiles = [re.sub(r'\\', '/', file) for file in newfiles2]
+
+
+with open('./_layouts/photo.html', 'w') as f:
+
+
+	f.write(h_f)
+
+
+	for d in newfiles:
+		f.write("%s\n" % d)
+
+
+	f.write(h_b)
