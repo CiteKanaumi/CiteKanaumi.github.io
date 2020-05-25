@@ -72,7 +72,7 @@ newfiles2 = ['<img src=".'+file+'">' for file in files]
 newfiles = [re.sub(r'\\', '/', file) for file in newfiles2]
 
 
-with open('./_includes/vrchat.html', 'w') as f:
+with open('./_layouts/vrchat.html', 'w') as f:
 
 
 	f.write(h_f)
