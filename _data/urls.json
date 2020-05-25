@@ -11,19 +11,19 @@
     "icon": "fa-comments"
   },
   {
-    "text": "Pictures",
-    "url": "/pictures/",
+    "text": "VRChat",
+    "url": "/VRC/",
+    "icon": "fa-desktop",
+    "layout": "post"
+  },
+  {
+    "text": "Projects",
+    "url": "/projects/",
     "icon": "fa-desktop"
   },
   {
     "text": "Resume",
     "url": "/#",
     "icon": "fa-graduation-cap"
-  },
-  {
-    "text": "VRChat",
-    "url": "/VRC/",
-    "icon": "fa-desktop",
-    "layout": "post"
   }
 ]
