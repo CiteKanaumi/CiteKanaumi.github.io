@@ -11,6 +11,11 @@
     "icon": "fa-comments"
   },
   {
+    "text": "Category",
+    "url": "/category/other",
+    "icon": "fa-list"
+  },
+  {
     "text": "VRChat",
     "url": "/VRC/",
     "icon": "fa-file-image-o",
