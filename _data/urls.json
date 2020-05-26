@@ -6,11 +6,6 @@
     "layout": "post"
   },
   {
-    "text": "About",
-    "url": "/about/",
-    "icon": "fa-comments"
-  },
-  {
     "text": "Category",
     "url": "/category/other",
     "icon": "fa-list"
@@ -36,5 +31,10 @@
     "text": "Resume",
     "url": "/#",
     "icon": "fa-graduation-cap"
+  },
+  {
+    "text": "About",
+    "url": "/about/",
+    "icon": "fa-comments"
   }
 ]
