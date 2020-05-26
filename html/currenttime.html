@@ -1,0 +1,23 @@
+<html>
+ <head>
+  <script type="text/javascript">
+   function prdate ( ) {
+    window.setTimeout ("location.reload ( )", 1000);
+    var today = new Date();
+    var thisyear = today.getFullYear ( );
+    var thismonth =today.getMonth ( )+1;
+    var thisday = today.getDate ( );
+    var h = today.getHours ( );
+    var m = today.getMinutes ( );
+    var s = today.getSeconds ( );
+    var prday = thisyear+"/"+thismonth+"/"+thisday+" "+h+":"+m+":"+s;
+    document.write (prday);
+    }
+  </script>
+ </head>
+ <body>
+  <script type="text/javascript">
+   prdate();
+  </script>
+ </body>
+</html>
