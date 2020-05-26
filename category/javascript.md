@@ -1,6 +1,6 @@
 ---
 layout: posts_by_category
-categories: javascript
-title: JavaScript
-permalink: /category/javascript
+categories: html
+title: html
+permalink: /category/html
 ---
