@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>分割払いシミュレーション</title>
+
+<script language = "javascript">
+<!--
+function bunkatsu(){
+
+kingaku = parseInt(document.in_form.in_kin.value);
+nenri = parseInt(document.in_form.in_nen.value);
+kaisu = parseInt(document.in_form.in_kai.value);
+
+nenri = nenri / 100;
+getsuri = nenri / 12;
+
+getsugaku = ( kingaku * getsuri * ((1 + getsuri) ** kaisu )) / (( 1 + getsuri ) ** kaisu - 1 );
+sougaku = Math.floor(getsugaku * kaisu);
+sourisi = sougaku - kingaku;
+
+a_getsugaku = Math.floor(getsugaku);
+f_getsugaku = sougaku - (a_getsugaku * (kaisu-1));
+
+document.out_form.out_sou.value = sougaku ;
+document.out_form.out_te.value = sourisi ;
+document.out_form.out_f.value = f_getsugaku ;
+document.out_form.out_a.value = a_getsugaku ;
+
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+<form name="in_form">
+<b>入力</b><br>
+ご利用金額：<input type=text name="in_kin" value="" size="6">円<br>
+実質年率：<input type=text name="in_nen" value="" size="1">%<br>
+支払回数：<input type=text name="in_kai" value="" size="1">回
+<input type=button value="実行" onClick="bunkatsu()"><br>
+</form>
+
+<form name="out_form">
+<b>出力</b><br>
+支払総額：<input type=text name="out_sou" value="" size="6">円<br>
+分割払手数料：<input type=text name="out_te" value="" size="6">円<br>
+初回支払額：<input type=text name="out_f" value="" size="6">円<br>
+以降支払額：<input type=text name="out_a" value="" size="6">円
+</form>
+
+</body>
+</html>
