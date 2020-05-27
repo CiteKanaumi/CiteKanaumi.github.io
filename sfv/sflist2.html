@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <link href="./pagetop.css" rel="stylesheet" >
 
-    <script src="./jquery-3.3.1.min.js"></script>
-    <script src="./jquery.csv2table.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery.csv2table.js"></script>
 
     
     <select id='list' style='height:50px;width:790px'>
@@ -70,13 +70,13 @@
         $().ready ( function() {
 
         $('#btn-search').click ( function() {
-        $('#view0').csv2table('./sfv/merge/merge_list.csv', {
+        $('#view0').csv2table('./data/merge/merge_list.csv', {
         where: [ {'Fighter\'s ID':'like' + '%' + $('#word').val() + '%'} ]
         });
         });
 
         $('#btn-search1').click ( function() {
-        $('#view0').csv2table('./sfv/merge/merge_list2.csv', {
+        $('#view0').csv2table('./data/merge/merge_list2.csv', {
         where: [ {'Fighter\'s ID':'like' + '%' + $('#word').val() + '%'} ]
         });
         });
@@ -93,7 +93,7 @@
 
         if(selectedItem.value !='NA'){
         $(function(){
-        $('#view0').csv2table('./sfv/'+selectedItem.value,{});
+        $('#view0').csv2table('./data/'+selectedItem.value,{});
         });
         }
         }
