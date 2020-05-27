@@ -1,0 +1,71 @@
+<html>
+<head>
+
+<script language = "javascript">
+<!--
+function bmi_tool(){
+
+shincho = parseInt(document.in_form.in_shin.value);
+taiju = parseInt(document.in_form.in_tai.value);
+
+shincho = shincho / 100;
+shincho2 = shincho ** 2;
+
+bmi = taiju / shincho2;
+bmi = bmi.toFixed(2);
+
+if(bmi >= 40){
+himan = "肥満(3度)";
+}
+else if(bmi >= 35){
+himan = "肥満(2度)";
+}
+else if(bmi >= 30){
+himan = "肥満(1度)";
+}
+else if(bmi >= 25){
+himan = "前肥満";
+}
+else if(bmi >= 18.5){
+himan = "普通体重";
+}
+else if(bmi >= 17){
+himan = "痩せぎみ";
+}
+else if(bmi >= 16){
+himan = "痩せ";
+}
+else{
+himan = "痩せすぎ";
+}
+
+teki = shincho2 * 22;
+teki = teki.toFixed(1);
+
+document.out_form.out_bmi.value = bmi;
+document.out_form.out_hi.value = himan;
+document.out_form.out_teki.value = teki;
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+<form name="in_form">
+<b>入力</b><br>
+身長：<input type=text name="in_shin" value="" size="2">cm<br>
+体重：<input type=text name="in_tai" value="" size="1">kg<br>
+<input type=button value="実行" onClick="bmi_tool()"><br>
+</form>
+
+<form name="out_form">
+<b>出力</b><br>
+BMI：<input type=text name="out_bmi" value="" size="2"><br>
+肥満度：<input type=text name="out_hi" value="" size="6"><br>
+適正体重：<input type=text name="out_teki" value="" size="1">kg
+</form>
+
+</body>
+</html>
